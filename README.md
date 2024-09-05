@@ -1,73 +1,34 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+<h2>랜딩화면 & 내 정보 화면</h2>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+![image](https://github.com/user-attachments/assets/930f8012-c475-48e9-8ced-6e92d6a7295f)
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+<br/>
 
-## Description
+<h2>메인 화면</h2>
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+![image](https://github.com/user-attachments/assets/14b26555-7afb-4b6d-9baa-da3f8d574d48)
 
-## Installation
+<br/>
 
-```bash
-$ yarn install
-```
+<h2>신고 화면</h2>
 
-## Running the app
+![image](https://github.com/user-attachments/assets/a890cf7d-3150-4e5b-95f8-8b8499d644dc)
 
-```bash
-# development
-$ yarn run start
+<br/>
 
-# watch mode
-$ yarn run start:dev
+<h2>신고내용 조회 화면</h2>
 
-# production mode
-$ yarn run start:prod
-```
+![image](https://github.com/user-attachments/assets/e0550166-f700-4515-bc04-6a1e1882e03a)
 
-## Test
+<br/>
 
-```bash
-# unit tests
-$ yarn run test
+<h2>관리자 메인 화면</h2>
 
-# e2e tests
-$ yarn run test:e2e
+![image](https://github.com/user-attachments/assets/d3357eb4-d1e9-4cfb-b687-70e890647732)
 
-# test coverage
-$ yarn run test:cov
-```
+<br/>
 
-## Support
+<h2>지역별 신고 내용 조회 화면</h2>
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+![image](https://github.com/user-attachments/assets/78d6400b-f6d4-458d-b14e-b4dc21a215ae)
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
