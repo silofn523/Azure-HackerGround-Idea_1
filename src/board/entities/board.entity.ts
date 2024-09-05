@@ -6,20 +6,13 @@ import {
   ManyToOne,
   CreateDateColumn
 } from 'typeorm'
-import { IsNotEmpty, IsNumber, IsString, MaxLength, MinLength } from 'class-validator'
+import { IsNotEmpty, IsNumber, IsString, Length, MaxLength, MinLength } from 'class-validator'
 import { User } from 'src/user/entities/user.entity'
 
 @Entity()
 export class Board extends BaseEntity {
   @PrimaryGeneratedColumn()
   public readonly id: number
-
-  @Column()
-  @IsNotEmpty()
-  @IsString()
-  @MinLength(1)
-  @MaxLength(40)
-  public readonly title: string
 
   @Column()
   @IsNotEmpty()
@@ -39,6 +32,9 @@ export class Board extends BaseEntity {
   @Column()
   @IsNotEmpty()
   @IsString()
+  @Length(1, 1000, {
+    message: '최소 입력은 1, 최대 입력은 1000입니다'
+  })
   public readonly des: string
 
   @Column()

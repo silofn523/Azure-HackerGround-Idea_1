@@ -22,7 +22,7 @@ export class AuthService {
       type: refreshToken ? 'refresh' : 'access'
     }
 
-    return this.jwt.sign(payload, {
+    return await this.jwt.signAsync(payload, {
       secret: process.env.JWT_SECRET,
       expiresIn: refreshToken ? '30d' : '10m'
     })
@@ -73,11 +73,14 @@ export class AuthService {
     return user.id
   }
 
-  public async verifyToken(token: string): Promise<{ id: number }> {
+  public async verifyToken(token: string): Promise<{ id: number; type: 'access' | 'refresh' }> {
     try {
-      const userId = this.jwt.verify(token) as { id: number }
+      const decoded = (await this.jwt.verifyAsync(token)) as {
+        id: number
+        type: 'access' | 'refresh'
+      }
 
-      return userId
+      return decoded
     } catch (e) {
       if (e instanceof TokenExpiredError) {
         throw new NotAcceptableException({

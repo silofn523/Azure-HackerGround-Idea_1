@@ -3,11 +3,6 @@ import { CreateBoardDto } from './create-board.dto'
 import { IsNotEmpty, IsString } from 'class-validator'
 
 export class UpdateBoardDto extends PartialType(CreateBoardDto) {
-  @ApiProperty({ description: '제목', default: '제목입력' })
-  @IsNotEmpty()
-  @IsString()
-  public readonly title: string
-
   @ApiProperty({ description: '카테고리', default: '예시: 낙석, 싱크홀' })
   @IsNotEmpty()
   @IsString()

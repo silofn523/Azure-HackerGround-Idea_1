@@ -21,8 +21,8 @@ async function bootstrap() {
     })
   )
   const config = new DocumentBuilder()
-    .setTitle('헤커그라운드 이곳저곳 Api문서')
-    .setDescription('권가령 김신우 프론트 화이팅!')
+    .setTitle('Api문서')
+    .setDescription('시ㅣㅣ발 결국 3c행이노 ')
     .setVersion('1.0')
     .addBearerAuth() // 인증 추가
     .build()

@@ -101,7 +101,8 @@ export class UserService {
         username: true,
         fullName: true,
         tel: true,
-        password: secret
+        password: secret,
+        role: true
       }
     }) ?? undefined
   }

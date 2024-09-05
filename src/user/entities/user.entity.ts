@@ -61,6 +61,6 @@ export class User extends BaseEntity {
   @IsString()
   readonly role: RolesEnum
 
-  @OneToMany(() => Board, (board) => board.user)
+  @OneToMany(() => Board, (board) => board.user, { eager: true })
   public readonly board: Board[]
 }

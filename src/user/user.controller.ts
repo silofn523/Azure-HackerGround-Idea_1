@@ -17,6 +17,8 @@ import { ApiBearerAuth, ApiBody, ApiOperation, ApiTags } from '@nestjs/swagger'
 import { User } from './entities/user.entity'
 import { RolesEnum } from './enum/roles.enum'
 import { Roles } from './decorator/roles.decorator'
+import { RolesGuard } from 'src/auth/guard/role.guard'
+import { AuthGuard } from 'src/auth/guard/auth.guard'
 
 @ApiTags('User("유저CRUD")')
 @Controller('user')
@@ -65,7 +67,9 @@ export class UserController {
     summary: '모든 사용자 정보 조회',
     description: '사용자 정보들을 불러옵니다.'
   })
+  @ApiBearerAuth()
   @Roles(RolesEnum.admin)
+  @UseGuards(AuthGuard, RolesGuard)
   @Get()
   public async findAllUser(): Promise<{ success: boolean; body: User[] }> {
     const users = await this.userService.findAllUser()
@@ -80,6 +84,8 @@ export class UserController {
     summary: '하나의 사용자만 조회',
     description: '사용자 정보를 불러옵니다.'
   })
+  @ApiBearerAuth()
+  @UseGuards(AuthGuard)
   @Get(':id')
   public async getOneUser(
     @Param('id') id: number
@@ -103,6 +109,8 @@ export class UserController {
     summary: '사용자 정보 수정',
     description: '회원 스테이터스를 수정 합니다.'
   })
+  @ApiBearerAuth()
+  @UseGuards(AuthGuard)
   @Patch(':id/update')
   public async updateUserStatus(
     @Param('id') id: number,
@@ -128,6 +136,8 @@ export class UserController {
     summary: '사용자 계정삭제',
     description: '사용자 계정을 삭제 합니다.'
   })
+  @ApiBearerAuth()
+  @UseGuards(AuthGuard)
   @Delete(':id')
   public async deleteUser(@Param('id') id: number): Promise<{ success: boolean }> {
     const user = await this.userService.getOneUser(id)
